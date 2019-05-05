@@ -9,14 +9,18 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
 
 const theme = createMuiTheme({
   palette: {
-    primary: purple,
-    secondary: {
-      main: '#ffea00',
+    primary: {
+      main: '#1D1E2C',
     },
+    secondary: {
+      main: '#FFFFFF',
+    },
+    inherit: {
+      main: '#563789'
+    }
   },
 });
 
@@ -33,24 +37,26 @@ const styles = {
   },
 };
 
+// ["default","error","inherit","primary","secondary","textPrimary","textSecondary"]
+
 function ButtonAppBar(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
     <MuiThemeProvider theme={theme}>
+    <div className={classes.root}>
       <AppBar position="static" color="primary">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <IconButton className={classes.menuButton} color="secondary" aria-label="Menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            Resilient Delta
+            Rafa Dakota
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="secondary">Login</Button>
         </Toolbar>
       </AppBar>
-    </MuiThemeProvider>
     </div>
+    </MuiThemeProvider>
   );
 }
 
