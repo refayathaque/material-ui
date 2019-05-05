@@ -13,13 +13,10 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#1D1E2C',
+      main: '#F46036',
     },
     secondary: {
-      main: '#FFFFFF',
-    },
-    inherit: {
-      main: '#563789'
+      main: '#171123',
     }
   },
 });
@@ -37,22 +34,20 @@ const styles = {
   },
 };
 
-// ["default","error","inherit","primary","secondary","textPrimary","textSecondary"]
-
-function ButtonAppBar(props) {
+const ButtonAppBar = (props) => {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="secondary">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="secondary" aria-label="Menu">
+          <IconButton className={classes.menuButton} color="primary" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
+          <Typography variant="h6" color="primary" className={classes.grow}>
             Rafa Dakota
           </Typography>
-          <Button color="secondary">Login</Button>
+          <Button color="primary">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
