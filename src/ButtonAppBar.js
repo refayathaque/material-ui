@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -18,6 +17,9 @@ const theme = createMuiTheme({
     secondary: {
       main: '#171123',
     }
+  },
+  typography: {
+    useNextVariants: true,
   },
 });
 
@@ -38,19 +40,19 @@ const ButtonAppBar = (props) => {
   const { classes } = props;
   return (
     <MuiThemeProvider theme={theme}>
-    <div className={classes.root}>
-      <AppBar position="static" color="secondary">
-        <Toolbar>
-          <IconButton className={classes.menuButton} color="primary" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="primary" className={classes.grow}>
-            Rafa Dakota
-          </Typography>
-          <Button color="primary">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+      <div className={classes.root}>
+        <AppBar position="static" color="secondary">
+          <Toolbar>
+            <IconButton className={classes.menuButton} color="primary" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" color="primary" className={classes.grow}>
+              Rafa Dakota
+            </Typography>
+            <Button color="primary">Login</Button>
+          </Toolbar>
+        </AppBar>
+      </div>
     </MuiThemeProvider>
   );
 }
