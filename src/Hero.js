@@ -43,8 +43,8 @@ const Hero = (props) => {
         <Typography component="h1" variant="h2" align="center" color="primary" gutterBottom>
           Full Stack Developer
         </Typography>
-        <Typography variant="h6" align="center" color="secondary" paragraph>
-          A cute sports guy that happens to love coding, optimizing infrastructure, and building CI/CD pipelines don&apos;t
+        <Typography variant="h5" align="center" color="secondary" paragraph>
+          A cute sports guy that happens to love coding, optimizing infrastructure, and building CI/CD pipelines. Don&apos;t let him pass you by.
         </Typography>
         <div className={classes.heroButtons}>
           <Grid container spacing={16} justify="center">
